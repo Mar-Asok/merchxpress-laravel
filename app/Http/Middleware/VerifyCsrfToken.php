@@ -14,7 +14,8 @@ class VerifyCsrfToken extends Middleware
     protected $except = [
         'api/login',     // Exclude login
         'api/register',  // Exclude register
-        'api/logout',    // Exclude logout (if you have one)
+        'api/logout',
+        // Exclude logout (if you have one)
         // If you have a password reset endpoint:
         // 'api/forgot-password',
         // 'api/reset-password',

@@ -14,12 +14,32 @@ return [
     | To learn more: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
     |
     */
-    'paths' => ['api/*', 'sanctum/csrf-cookie', 'login', 'logout', 'register', 'user'], // <-- ADD 'user' here
+    'paths' => [
+        'api/*', 
+        'sanctum/csrf-cookie', 
+        'login', 
+        'logout', 
+        'register', 
+        'user'
+    ],
+    
     'allowed_origins' => ['http://localhost:3000'], // Your React app's URL
+    
     'allowed_methods' => ['*'],
-    'allowed_headers' => ['*'],
+    
+    'allowed_headers' => [
+        'Accept',
+        'Authorization',
+        'Content-Type',
+        'X-Requested-With',
+        'X-CSRF-TOKEN',
+        'X-XSRF-TOKEN',
+    ],
+    
     'exposed_headers' => [],
+    
     'max_age' => 0,
+    
     'supports_credentials' => true, // VERY IMPORTANT for Sanctum to work with cookies
 
 ];
